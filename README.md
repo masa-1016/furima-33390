@@ -20,16 +20,17 @@
 
 ## items テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| name         | string  | null: false |
-| explanation  | text    | null: false |
-| category_id  | integer | null: false |
-| condition_id | integer | null: false |
-| postage_id   | integer | null: false |
-| area_id      | integer | null: false |
-| time_id      | integer | null: false |
-| price        | integer | null: false |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| explanation  | text       | null: false                    |
+| category_id  | integer    | null: false                    |
+| condition_id | integer    | null: false                    |
+| postage_id   | integer    | null: false                    |
+| area_id      | integer    | null: false                    |
+| time_id      | integer    | null: false                    |
+| price        | integer    | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -60,7 +61,6 @@
 | building      | string     |                                |
 | telephone     | string     | null: false                    |
 | history       | references | null: false, foreign_key: true |
-| user          | references | null: false, foreign_key: true |
 
 ### Association
 
