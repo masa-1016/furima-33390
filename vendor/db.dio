@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="Pjxt-03t1QWDViaXlTxc" name="ページ1">
-        <mxGraphModel dx="691" dy="405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="881" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,7 +34,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="E06iSb66YRoUCVhU9au7-6" value="name&#10;explantion&#10;category&#10;condition&#10;postage&#10;area&#10;time&#10;price&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="1" vertex="1">
+                <mxCell id="E06iSb66YRoUCVhU9au7-6" value="name&#10;explantion&#10;category_id&#10;condition_id&#10;postage_id&#10;area_id&#10;time_id&#10;price&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="1" vertex="1">
                     <mxGeometry x="399" y="146" width="120" height="124" as="geometry"/>
                 </mxCell>
                 <mxCell id="E06iSb66YRoUCVhU9au7-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.01;entryY=0.315;entryDx=0;entryDy=0;entryPerimeter=0;endSize=20;startSize=20;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;" parent="1" target="E06iSb66YRoUCVhU9au7-10" edge="1">
@@ -60,8 +60,8 @@
                 <mxCell id="18" value="addresses" style="swimlane;fontSize=11;fontStyle=0" parent="1" vertex="1">
                     <mxGeometry x="500" y="340" width="130" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="&lt;span style=&quot;&quot;&gt;postal&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;prefecture&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;city&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;address&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;building&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px;&quot;&gt;&lt;span style=&quot;&quot;&gt;telephone&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="18" vertex="1">
-                    <mxGeometry x="10" y="30" width="70" height="90" as="geometry"/>
+                <mxCell id="20" value="&lt;span&gt;postal&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;&lt;span&gt;prefecture_id&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;&lt;span&gt;city&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;&lt;span&gt;address&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;&lt;span&gt;building&lt;/span&gt;&lt;br style=&quot;padding: 0px ; margin: 0px&quot;&gt;&lt;span&gt;telephone&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="18" vertex="1">
+                    <mxGeometry x="10" y="30" width="90" height="90" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

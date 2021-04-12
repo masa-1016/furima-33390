@@ -2,16 +2,16 @@
 
 ## users テーブル
 
-| Column             | Type   | Options     |
-| -----------------  | ------ | ----------- |
-| nickname           | string | null: false |
-| last_name          | string | null: false |
-| last_name_kana     | string | null: false |
-| first_name         | string | null: false |
-| first_name_kana    | string | null: false |
-| email              | string | null: false |
-| encrypted_password | string | null: false |
-| birthday           | date   | null: false |
+| Column             | Type   | Options                   |
+| -----------------  | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| last_name          | string | null: false               |
+| last_name_kana     | string | null: false               |
+| first_name         | string | null: false               |
+| first_name_kana    | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| birthday           | date   | null: false               |
 
 ### Association
 
@@ -20,21 +20,21 @@
 
 ## items テーブル
 
-| Column       | Type    | Options           |
-| ------------ | ------- | ----------------- |
-| name         | string  | null: false       |
-| explanation  | text    | null: false       |
-| category_id  | string  | null: false       |
-| condition_id | string  | null: false       |
-| postage_id   | string  | null: false       |
-| area_id      | string  | null: false       |
-| time_id      | integer | foreign_key: true |
-| price        | string  | null: false       |
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| name         | string  | null: false |
+| explanation  | text    | null: false |
+| category_id  | integer | null: false |
+| condition_id | integer | null: false |
+| postage_id   | integer | null: false |
+| area_id      | integer | null: false |
+| time_id      | integer | null: false |
+| price        | integer | null: false |
 
 ### Association
 
 - belongs_to :user
-- has_one :histories
+- has_one :history
 
 ## histories
 
@@ -47,14 +47,14 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one :addresses
+- has_one :address
 
 ## addresses
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | postal        | string     | null: false                    |
-| prefecture_id | integer    | foreign_key: true              |
+| area_id       | integer    | null: false                    |
 | city          | string     | null: false                    |
 | address       | string     | null: false                    |
 | building      | string     |                                |
