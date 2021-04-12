@@ -60,6 +60,7 @@
 | building      | string     |                                |
 | telephone     | string     | null: false                    |
 | history       | references | null: false, foreign_key: true |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 
