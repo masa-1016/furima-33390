@@ -8,7 +8,7 @@ class User < ApplicationRecord
     validates :nickname
     validates :birthday
 
-    with_options format: { with: /\A[ぁ-ゔァ-ヴ\p{Ideographic}ａ-ｚＡ-Ｚ０-９]+\z/ } do
+    with_options format: { with: /\A[ぁ-んァ-ン一-龥]+\z/ } do
       validates :last_name
       validates :first_name
     end
