@@ -6,7 +6,7 @@ require 'rails_helper'
     end
 
     context '保存できる場合' do
-      it "全ての項目の入力が存在すれば登録できること" do
+      it "全ての項目の入力が存在すれば登録できる" do
         expect(@user).to be_valid
       end
     end
@@ -54,7 +54,6 @@ require 'rails_helper'
       it "passwordは半角英字のみでは登録できない" do
         @user.password = "aaaaaa"
         @user.valid?
-        #binding.pry
         expect(@user.errors.full_messages).to include("Password is invalid")
       end
 
