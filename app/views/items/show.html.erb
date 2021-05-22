@@ -9,8 +9,7 @@
     <div class="item-img-content">
       <%= image_tag @item.image ,class:"item-box-img" %>
 
-      <%# 商品購入機能実装した後に追加で実装 %>
-      <%# if  %>
+      <%# if  %>  <%# 商品購入機能実装した後に追加で実装 %>
       <div class="sold-out">
         <span>Sold Out!!</span>
       </div>
@@ -26,13 +25,13 @@
       </span>
     </div>
 
-    <%# 売却済みの場合はsold outと出力し全てのボタンを非表示にする%>
-    <%# 商品購入機能実装した後に追加で実装 %>
     <% if user_signed_in? %>
       <% if current_user.id == @item.user_id %>
-        <%= link_to "商品の編集", "#", method: :get, class: "item-red-btn" %>
-        <p class="or-text">or</p>
-        <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
+        <%# if '商品が出品中である' %>  <%# 商品購入機能実装した後に追加で実装 %>
+          <%= link_to "商品の編集", "#", method: :get, class: "item-red-btn" %>
+          <p class="or-text">or</p>
+          <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
+        <%# end%>
       <% else %>
         <%= link_to "購入画面に進む", "#" ,class:"item-red-btn"%>
       <% end%>
