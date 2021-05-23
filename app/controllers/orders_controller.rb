@@ -1,10 +1,7 @@
 class OrdersController < ApplicationController
 
-  include ActiveModel::Model
-  #attr_accessor :hoge,:fuga...
-
   def index
-    @order = Order.new
+    @order = Order.new(order_params)
   end
 
   def create
@@ -17,14 +14,10 @@ class OrdersController < ApplicationController
     end
   end
 
-  def save
-    # 各テーブルにデータを保存する処理を書く
-  end
-
   private
 
   def order_params
-    params.require(:order).permit(:price)
+    params.permit(:postal, :area_id, :city, :address, :building, :telephone)
   end
 
 end
