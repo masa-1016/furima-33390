@@ -1,6 +1,5 @@
-class Order < ApplicationRecord
-  #include ActiveModel::Model
-  #attr_accessor 
-
-  #validates :area_id { other_than: 1 }
+class Order
+  include ActiveModel::Model
+  attr_accessor :token
+  validates :token, presence: true
 end
