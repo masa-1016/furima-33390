@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :create]
   before_action :item_find, only: [:index, :create]
+  before_action :move_to_index, only: [:index, :create]
+  before_action :move_to_index2, only: [:index, :create]
 
   def index
     @charge_form = ChargeForm.new
@@ -12,6 +15,7 @@ class OrdersController < ApplicationController
       @charge_form.save
       redirect_to root_path
     else
+      @charge_form = nil
       render :index
     end
   end
@@ -33,6 +37,18 @@ class OrdersController < ApplicationController
       card: charge_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def move_to_index
+    if current_user == @item.user
+      redirect_to root_path
+    end
+  end
+
+  def move_to_index2
+    if @item.history.present?
+      redirect_to root_path
+    end
   end
 
 end
