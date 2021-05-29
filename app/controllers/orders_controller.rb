@@ -6,7 +6,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    #binding.pry
     @charge_form = ChargeForm.new(charge_params)
     if @charge_form.valid?
       pay_item
@@ -31,7 +30,7 @@ class OrdersController < ApplicationController
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
       amount: @item.price,
-      card: charege_params[:token],
+      card: charge_params[:token],
       currency: 'jpy'
     )
   end
