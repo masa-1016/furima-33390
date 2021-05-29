@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
       @charge_form.save
       redirect_to root_path
     else
-      @charge_form = nil
       render :index
     end
   end
