@@ -6,7 +6,7 @@ class ChargeForm
   with_options presence: true do
     validates :postal, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :telephone, format: { with: /\A\d{10,11}\z/ }
-    validates :city, :address, :telephone, :token
+    validates :city, :address, :telephone, :token, :user_id, :item_id
   end
   
   validates :area_id, numericality: { other_than: 1 }
